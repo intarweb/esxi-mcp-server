@@ -8,7 +8,10 @@ from dataclasses import dataclass
 from typing import Optional, Dict, Any
 
 # MCP protocol related imports
-from mcp.server.fastmcp import FastMCP
+try:  # mcp >= 2 renamed FastMCP to MCPServer
+    from mcp.server.mcpserver import MCPServer as FastMCP
+except ImportError:
+    from mcp.server.fastmcp import FastMCP
 
 # pyVmomi VMware API imports
 from pyVim import connect
