@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "esxi-mcp-server": {
+      "command": "uvx",
+      "args": ["esxi-mcp-server"],
+      "env": {
+        "VCENTER_HOST": "192.168.0.254",
+        "VCENTER_USER": "administrator@vsphere.local",
+        "VCENTER_PASSWORD": "your-password",
+        "VCENTER_INSECURE": "true"
+      }
+    }
+  }
+}
